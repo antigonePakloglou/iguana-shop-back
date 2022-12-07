@@ -11,6 +11,14 @@ export class IguaneService {
     return this.iguaneRepository.find();
   }
 
+  getIguaneById(id: number): Promise<Iguane> {
+    return this.iguaneRepository.findOne({
+      where: {
+        id: id,
+      },
+    });
+  }
+
   /* getAllIguaneByRefuge(refuge: number): Promise<Iguane[]> {
     return this.iguaneRepository.find({
       where: {

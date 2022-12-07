@@ -19,6 +19,13 @@ let IguaneService = class IguaneService {
     getAllIguane() {
         return this.iguaneRepository.find();
     }
+    getIguaneById(id) {
+        return this.iguaneRepository.findOne({
+            where: {
+                id: id,
+            },
+        });
+    }
 };
 IguaneService = __decorate([
     (0, common_1.Injectable)(),

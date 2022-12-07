@@ -8,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IguaneController = void 0;
 const common_1 = require("@nestjs/common");
@@ -19,6 +22,9 @@ let IguaneController = class IguaneController {
     getAllIguane() {
         return this.iguaneService.getAllIguane();
     }
+    getIguaneById(id) {
+        return this.iguaneService.getIguaneById(id);
+    }
 };
 __decorate([
     (0, common_1.Get)(),
@@ -26,8 +32,15 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], IguaneController.prototype, "getAllIguane", null);
+__decorate([
+    (0, common_1.Get)('/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], IguaneController.prototype, "getIguaneById", null);
 IguaneController = __decorate([
-    (0, common_1.Controller)('iguane'),
+    (0, common_1.Controller)('api/iguane'),
     __metadata("design:paramtypes", [iguane_service_1.IguaneService])
 ], IguaneController);
 exports.IguaneController = IguaneController;

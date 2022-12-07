@@ -3,4 +3,5 @@ export declare class Refuge {
     id: number;
     nom: string;
     iguane: Iguane[];
+    iguaneId: number;
 }

@@ -7,7 +7,7 @@
 
 
 ## Installation et lancement
-Avant le premier lancement de l'application vous devez créer une base de donnée dans phpMyAdmin du nom de <bold>iguane_shop</bold>. 
+Avant le premier lancement de l'application vous devez créer une base de donnée dans phpMyAdmin du nom de <bold>iguane_shop</bold>. </br>
 Dans le fichier <bold>app.module</bold> verifiez que les attributs "username" et "password" sont correctement renseignés avec vos informations de connexion.
 Pour lancer l'application executer la commande ci-dessous afin de récuperer les dépendances du projet. Le dossier node_modules sera ainsi créer.
 ```bash

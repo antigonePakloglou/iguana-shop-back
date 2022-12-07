@@ -11,6 +11,14 @@ export class RefugeService {
     return this.refugeRepository.find();
   }
 
+  getRefugeById(id: number): Promise<Refuge> {
+    return this.refugeRepository.findOne({
+      where: {
+        id: id,
+      },
+    });
+  }
+
   /* getAllIguaneByRefuge(refuge: string): Promise<Refuge[]> {
     return this.refugeRepository.find({
       where: {

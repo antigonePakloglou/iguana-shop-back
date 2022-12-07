@@ -28,6 +28,10 @@ __decorate([
     __metadata("design:type", refuge_entity_1.Refuge)
 ], Iguane.prototype, "refuge", void 0);
 __decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Iguane.prototype, "refugeId", void 0);
+__decorate([
     (0, typeorm_1.OneToMany)(() => demande_adoption_entity_1.DemandeAdoption, (demandeAdoption) => demandeAdoption.iguane),
     __metadata("design:type", Array)
 ], Iguane.prototype, "demandeAdoption", void 0);

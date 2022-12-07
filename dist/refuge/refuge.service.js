@@ -19,6 +19,13 @@ let RefugeService = class RefugeService {
     getAllRefuge() {
         return this.refugeRepository.find();
     }
+    getRefugeById(id) {
+        return this.refugeRepository.findOne({
+            where: {
+                id: id,
+            },
+        });
+    }
 };
 RefugeService = __decorate([
     (0, common_1.Injectable)(),

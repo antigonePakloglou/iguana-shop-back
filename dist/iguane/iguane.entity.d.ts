@@ -4,6 +4,7 @@ export declare class Iguane {
     id: number;
     nom: string;
     refuge: Refuge;
+    refugeId: number;
     demandeAdoption: DemandeAdoption[];
     couleur: string;
     taille: number;

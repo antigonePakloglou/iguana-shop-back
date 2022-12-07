@@ -4,4 +4,5 @@ export declare class IguaneController {
     private readonly iguaneService;
     constructor(iguaneService: IguaneService);
     getAllIguane(): Promise<Iguane[]>;
+    getIguaneById(id: number): Promise<Iguane>;
 }

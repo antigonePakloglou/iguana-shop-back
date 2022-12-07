@@ -11,7 +11,10 @@ export class Iguane {
   nom: string;
 
   @ManyToOne(() => Refuge, (refuge) => refuge.iguane)
-    refuge: Refuge
+  refuge: Refuge
+
+  @Column()
+  refugeId: number;
 
   @OneToMany(() => DemandeAdoption, (demandeAdoption) => demandeAdoption.iguane)
   demandeAdoption: DemandeAdoption[]  

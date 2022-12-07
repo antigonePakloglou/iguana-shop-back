@@ -4,4 +4,5 @@ export declare class RefugeService {
     private readonly refugeRepository;
     constructor(refugeRepository: RefugeRepository);
     getAllRefuge(): Promise<Refuge[]>;
+    getRefugeById(id: number): Promise<Refuge>;
 }

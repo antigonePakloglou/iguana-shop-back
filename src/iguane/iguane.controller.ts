@@ -4,7 +4,7 @@ import { IguaneService } from './iguane.service';
 
 
 
-@Controller('iguane')
+@Controller('api/iguane')
 export class IguaneController {
   constructor(private readonly iguaneService: IguaneService) {}
 
@@ -13,10 +13,14 @@ export class IguaneController {
     return this.iguaneService.getAllIguane();
   }
 
+  @Get('/:id')
+  getIguaneById(@Param('id') id: number): Promise<Iguane> {
+    return this.iguaneService.getIguaneById(id);
+  }
 /*   @Get('/:refuge')
   getAllVehiclesByType(@Param('refuge') refuge: number): Promise<Iguane[]> {
     return this.iguaneService.getAllIguaneByRefuge(refuge);
   } */
 
- 
 }
+
