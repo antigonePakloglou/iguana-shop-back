@@ -4,4 +4,5 @@ export declare class DemandeAdoptionController {
     private readonly demandeAdoptionService;
     constructor(demandeAdoptionService: DemandeAdoptionService);
     getAllRefuge(): Promise<DemandeAdoption[]>;
+    create(demandeAdoption: DemandeAdoption): Promise<DemandeAdoption>;
 }

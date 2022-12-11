@@ -19,6 +19,11 @@ let DemandeAdoptionService = class DemandeAdoptionService {
     getAllDemandeAdoption() {
         return this.demandeAdoptionRepository.find();
     }
+    createDemandeAdoption(newAdoptionDemande) {
+        const adoptionDemandeToCreate = Object.assign({}, newAdoptionDemande);
+        console.log('adoptionDemandeToCreate :>> ', adoptionDemandeToCreate);
+        return this.demandeAdoptionRepository.save(adoptionDemandeToCreate);
+    }
 };
 DemandeAdoptionService = __decorate([
     (0, common_1.Injectable)(),

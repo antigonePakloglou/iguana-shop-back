@@ -5,4 +5,5 @@ export declare class DemandeAdoption {
     telephone: number;
     numero_declaration: number;
     iguane: Iguane;
+    iguaneId: number;
 }

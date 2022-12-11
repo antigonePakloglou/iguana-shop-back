@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { DemandeAdoption } from './demande_adoption.entity';
+import { IDemandeAdoption } from './demande_adoption.interface';
 import { DemandeAdoptionRepository } from './demande_adoption.repository';
 
 
@@ -11,13 +12,14 @@ export class DemandeAdoptionService {
     return this.demandeAdoptionRepository.find();
   }
 
-  /* getAllIguaneByRefuge(refuge: string): Promise<Refuge[]> {
-    return this.refugeRepository.find({
-      where: {
-        refuge: refuge,
-      },
-    });
-  } */
+  createDemandeAdoption(
+    newAdoptionDemande: Omit<IDemandeAdoption, 'id'>,
+  ): Promise<DemandeAdoption> {
+   
+    const adoptionDemandeToCreate = {
+      ...newAdoptionDemande
+    };
+    return this.demandeAdoptionRepository.save(adoptionDemandeToCreate);
+  }
 
-  
 }

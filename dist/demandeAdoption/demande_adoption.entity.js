@@ -23,17 +23,21 @@ __decorate([
     __metadata("design:type", String)
 ], DemandeAdoption.prototype, "email", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: 'bigint' }),
     __metadata("design:type", Number)
 ], DemandeAdoption.prototype, "telephone", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: 'bigint' }),
     __metadata("design:type", Number)
 ], DemandeAdoption.prototype, "numero_declaration", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => iguane_entity_1.Iguane, (iguane) => iguane.demandeAdoption),
     __metadata("design:type", iguane_entity_1.Iguane)
 ], DemandeAdoption.prototype, "iguane", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], DemandeAdoption.prototype, "iguaneId", void 0);
 DemandeAdoption = __decorate([
     (0, typeorm_1.Entity)()
 ], DemandeAdoption);

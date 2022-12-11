@@ -9,13 +9,15 @@ export class DemandeAdoption {
   @Column()
   email: string;
 
-  @Column()
+  @Column({type: 'bigint'})
   telephone: number;
 
-  @Column()
+  @Column({ type: 'bigint'})
   numero_declaration: number;
 
   @ManyToOne(() => Iguane, (iguane) => iguane.demandeAdoption)
-    iguane: Iguane
+  iguane: Iguane
 
+  @Column()
+  iguaneId: number;
 }
