@@ -15,7 +15,6 @@ export class DemandeAdoptionController {
 
   @Post()
   create(@Body() demandeAdoption: DemandeAdoption) {
-    console.log('obdemandeAdoptionject :>> ', demandeAdoption);
     return this.demandeAdoptionService.createDemandeAdoption(demandeAdoption);
   }
  
