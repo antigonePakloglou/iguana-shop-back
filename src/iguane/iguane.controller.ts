@@ -17,10 +17,7 @@ export class IguaneController {
   getIguaneById(@Param('id') id: number): Promise<Iguane> {
     return this.iguaneService.getIguaneById(id);
   }
-/*   @Get('/:refuge')
-  getAllVehiclesByType(@Param('refuge') refuge: number): Promise<Iguane[]> {
-    return this.iguaneService.getAllIguaneByRefuge(refuge);
-  } */
+
 
 }
 

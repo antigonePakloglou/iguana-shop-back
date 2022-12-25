@@ -17,15 +17,5 @@ export class IguaneService {
         id: id,
       },
     });
-  }
-
-  /* getAllIguaneByRefuge(refuge: number): Promise<Iguane[]> {
-    return this.iguaneRepository.find({
-      where: {
-        refuge: refuge,
-      },
-    });
-  } */
-
-  
+  }  
 }

@@ -12,7 +12,5 @@ export class Refuge {
   @OneToMany(() => Iguane, (iguane) => iguane.refuge)
   iguane: Iguane[]
 
-  @Column()
-  iguaneId: number;
 
 }

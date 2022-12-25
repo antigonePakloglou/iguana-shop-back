@@ -17,5 +17,10 @@ export class DemandeAdoptionController {
   create(@Body() demandeAdoption: DemandeAdoption) {
     return this.demandeAdoptionService.createDemandeAdoption(demandeAdoption);
   }
+
+  @Get()
+  getAllDemandes(): Promise<DemandeAdoption[]> {
+    return this.demandeAdoptionService.getAllDemandeAdoption();
+  }
  
 }

@@ -26,10 +26,6 @@ __decorate([
     (0, typeorm_1.OneToMany)(() => iguane_entity_1.Iguane, (iguane) => iguane.refuge),
     __metadata("design:type", Array)
 ], Refuge.prototype, "iguane", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], Refuge.prototype, "iguaneId", void 0);
 Refuge = __decorate([
     (0, typeorm_1.Entity)()
 ], Refuge);

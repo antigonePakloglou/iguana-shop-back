@@ -21,7 +21,6 @@ let DemandeAdoptionService = class DemandeAdoptionService {
     }
     createDemandeAdoption(newAdoptionDemande) {
         const adoptionDemandeToCreate = Object.assign({}, newAdoptionDemande);
-        console.log('adoptionDemandeToCreate :>> ', adoptionDemandeToCreate);
         return this.demandeAdoptionRepository.save(adoptionDemandeToCreate);
     }
 };

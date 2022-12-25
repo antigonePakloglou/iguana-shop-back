@@ -24,8 +24,10 @@ let DemandeAdoptionController = class DemandeAdoptionController {
         return this.demandeAdoptionService.getAllDemandeAdoption();
     }
     create(demandeAdoption) {
-        console.log('obdemandeAdoptionject :>> ', demandeAdoption);
         return this.demandeAdoptionService.createDemandeAdoption(demandeAdoption);
+    }
+    getAllDemandes() {
+        return this.demandeAdoptionService.getAllDemandeAdoption();
     }
 };
 __decorate([
@@ -41,6 +43,12 @@ __decorate([
     __metadata("design:paramtypes", [demande_adoption_entity_1.DemandeAdoption]),
     __metadata("design:returntype", void 0)
 ], DemandeAdoptionController.prototype, "create", null);
+__decorate([
+    (0, common_1.Get)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], DemandeAdoptionController.prototype, "getAllDemandes", null);
 DemandeAdoptionController = __decorate([
     (0, common_1.Controller)('api/demandeAdoption'),
     __metadata("design:paramtypes", [demande_adoption_service_1.DemandeAdoptionService])
