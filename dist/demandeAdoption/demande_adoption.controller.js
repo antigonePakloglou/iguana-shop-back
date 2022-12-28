@@ -24,7 +24,6 @@ let DemandeAdoptionController = class DemandeAdoptionController {
         return this.demandeAdoptionService.getAllDemandeAdoption();
     }
     create(demandeAdoption) {
-        console.log('obdemandeAdoptionject :>> ', demandeAdoption);
         return this.demandeAdoptionService.createDemandeAdoption(demandeAdoption);
     }
 };
