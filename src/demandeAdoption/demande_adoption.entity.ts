@@ -20,4 +20,7 @@ export class DemandeAdoption {
 
   @Column()
   iguaneId: number;
+
+  @Column()
+  isEligible: boolean;
 }
