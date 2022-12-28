@@ -17,6 +17,12 @@ Pour démarrer l'application :
 ```bash
 $ npm run start
 ```
+Pour récupérer les données l'application :
+```bash
+insérer les fichiers "iguane.sql" et "refuge.sql" dans les tables précédemment crées
+```
+
+Votre back est lancé, vous pouvez passer à la partie frontend.
 
 
 
