@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { DemandeAdoption } from './demande_adoption.entity';
 import { DemandeAdoptionService } from './demande_adoption.service';
 
@@ -16,6 +16,11 @@ export class DemandeAdoptionController {
   @Post()
   create(@Body() demandeAdoption: DemandeAdoption) {
     return this.demandeAdoptionService.createDemandeAdoption(demandeAdoption);
+  }
+
+  @Put(':id')
+  update(@Param('id') id: number,  @Body() demandeAdoptionUpdt: DemandeAdoption) {
+    return this.demandeAdoptionService.updateEligibleDemandeAdoption(id, demandeAdoptionUpdt);
   }
 
   @Get()

@@ -4,4 +4,5 @@ export interface IDemandeAdoption {
   telephone: number;
   numero_declaration: number;
   iguaneId: number;
+  isEligible: boolean
 }
